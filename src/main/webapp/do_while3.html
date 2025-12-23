@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+//사용자에게 숫자를 계속 반복해서 입력받는다.
+//사용자가 0을 입력하면 입력을 종료한다
+//1. 입력한 숫자의 총합
+//2. 입력한 숫자의 개수
+//3. 가장 큰 수
+//4. 가장 작은 수
+
+let count = 0;//누적합
+let max = null;//최대값
+let min = null;//최소값
+let sum = 0;//총합
+let number;
+
+do { number = parseInt(prompt("숫자 정수를 입력하세요 :"))
+	if(number===0){break;}
+	
+	if (number>max || max === null) {max = number;}
+	
+	if (number<min || min === null) {min = number;}		
+	
+	sum += number;
+	count++;	
+
+	document.write(count, "번째 입력 : ",number ,"<br>");
+	
+} while (true);
+
+document.write("1. 입력한 숫자의 총합 : ", sum);
+document.write("<br>2. 입력한 숫자의 갯수 : ", count);
+document.write("<br>3. 가장 큰 수 : ", max);
+document.write("<br>4. 가장 작은 수 : ", min);
+
+
+
+
+
+</script>
+</body>
+</html>

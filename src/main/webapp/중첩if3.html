@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let id = prompt("아이디를 입력하세요", "");
+
+		let pw = prompt("비밀번호를 입력하세요", "");
+
+		if (id === "member" && pw === "1234") {
+			document.write("로그인 성공. <br><br>");
+			let grade = prompt("회원 등급을 입력해주세요.", "일반");
+			if (grade === "VIP") {
+				document.write("VIP 회원 혜택 : 무료 영화 관람 쿠폰 3장!")
+			} else if (grade === "일반") {
+				document.write("일반 회원 혜택 : 할인 쿠폰 1장!")
+			}
+		} else {
+			document.write("로그인 실패. 아이디나 비밀번호 입력이 틀렸습니다.");
+		}
+	</script>
+</body>
+</html>

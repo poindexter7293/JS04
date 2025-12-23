@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>중첩 if문 예제 3 - 시험 점수 평가</title>
+</head>
+<body>
+<script>
+// [1단계] 과목 이름 입력받기
+let subject = prompt("과목 이름을 입력하세요 (국어/수학):", "국어");
+
+// [2단계] 점수 입력받기
+let score = prompt("점수를 입력하세요 (0~100):", "0");
+score = parseInt(score, 10);
+
+// [3단계] 과목에 따라 다른 기준 적용 (바깥쪽 if문)
+if (subject === "국어") {
+    // 국어 과목 기준
+    if (score >= 90) {
+        document.write("국어 점수: A (매우 우수)");
+    } else if (score >= 70) {
+        document.write("국어 점수: B (양호)");
+    } else {
+        document.write("국어 점수: C (보통 이하)");
+    }
+} else if (subject === "수학") {
+    // 수학 과목 기준 (좀 더 엄격하게 평가)
+    if (score >= 95) {
+        document.write("수학 점수: A (탁월)");
+    } else if (score >= 80) {
+        document.write("수학 점수: B (좋음)");
+    } else {
+        document.write("수학 점수: C (개선 필요)");
+    }
+} else {
+    document.write("과목 입력이 잘못되었습니다.");
+}
+</script>
+</body>
+</html>

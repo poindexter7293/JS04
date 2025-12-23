@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+//사용자에게 숫자를 계속 입력받아 입력한 숫자들의 합이 100 이상이 될 때까지 반복하세요
+//100 이상이 되는 순간 반복을 멈추고 "총합은" ____이고 입력 횟수는 __번 입니다.
+
+let sum = 0; //입력값의 총합
+let count = 0; //입력횟수 저장
+let number; //입력받은 숫자
+
+do {number = parseInt(prompt("숫자 정수를 입력하세요 :"));
+	
+	
+	if( sum < 100){
+		sum += number;
+		count++;
+		document.write(count, "번째 입력 : ", number, " 현재 합계 :", sum, "<br>" )
+	}
+	
+	
+} while (sum < 100);
+
+document.write("총합은 ", number, "이고 입력 횟수는 ",count ,"번 입니다.");
+
+
+
+
+</script>
+</body>
+</html>

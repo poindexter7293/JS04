@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+let mon = prompt("현재 몇월인지 입력하세요!");
+let message;
+
+switch (true) {
+case (mon >= 9  && mon <= 11): message = "독서의 계절 가을 이네요"; break;
+	
+case (mon >= 6  && mon <= 8): message = "여행 가기 좋은 여름 이네요!!"; break;
+	
+case (mon >= 3 && mon <= 5): message = "햇살 가득한 봄이네요!!"; break;
+
+default: message = "스키의 계절 겨울이네요!!"; break;
+}
+
+document.write (message);
+
+</script>
+</body>
+</html>

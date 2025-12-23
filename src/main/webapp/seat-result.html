@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	table, td{
+		border : 1px solid #CCC;	
+	border-collapse: collapse;
+	}
+	td{padding : 7px;
+	font-size: 0.9em;
+	text-align: center;	
+	}
+
+
+</style>
+</head>
+
+<body>
+<h1>자리 배치도</h1>
+<!-- 
+주제 : 입장객의 수와 한줄에 앉을 수 있는 사람의 수를 입력받아
+		좌석 배치도를 생성하는 프로그램.
+-->
+<script type="text/javascript">
+
+let i; // 현재 줄(행)의 인덱스
+let j;// 현재 줄에서 열의 위치
+
+let memNum = prompt("전체 입장객 수는 몇명인가요?");
+
+let colNum = prompt("한줄에 몇 명씩 앉습니까?");//한줄에 앉을 수 있는 사람의 수
+
+let rowNum;//전체 줄(행) 수
+
+if (memNum % colNum === 0) {rowNum = parseInt(memNum/colNum);
+
+} else{rowNum = parseInt(memNum/colNum) +1;
+}
+
+document.write("<table>");
+for (i = 0; i < rowNum; i++) {
+document.write("<tr>");
+for (j = 1; j <= colNum; j++) {
+	let seatNo = i*colNum+j; //현재 좌석 번호
+		if(seatNo>memNum) {break;}
+	
+	document.write("<td>좌석", seatNo ,"</td>");
+}
+document.write("</tr>");
+}
+document.write("</table>");
+
+
+</script>
+</body>
+</html>
